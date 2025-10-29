@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Rahul Yadav</title>
+  <style>
+    /* 🌈 Animated Gradient Background */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      overflow-x: hidden;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 🎂 Page Styling */
+    .page {
+      display: none;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 3rem;
+      text-align: center;
+      border-radius: 25px;
+      border: 6px solid rgba(255,255,255,0.7);
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      color: white;
+      background: rgba(0,0,0,0.3);
+    }
+    .page.active { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(to right, #ffdd00, #ff3cac);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    p { font-size: 1.3rem; margin-top: 1rem; }
+
+    .media img, .media video {
+       width: 500px;       /* make the box smaller */
+    height: 350px;      /* box height */
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform .3s;
+
+    }
+
+    .btn {
+      margin: 1rem;
+      padding: 12px 25px;
+      background: white;
+      border-radius: 35px;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform .2s;
+      color: #333;
+    }
+    .btn:hover { transform: scale(1.1); }
+
+    .blessing {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .repeated-wishes {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .repeated-wishes div {
+      background: rgba(255,255,255,0.7);
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #222;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* 🎈 Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      border-radius: 50%;
+      background: red;
+      animation: floatUp 10s linear infinite;
+    }
+    .balloon:after {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: black;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+
+    /* 🎉 Falling Poppers & Confetti */
+    .popper {
+      position: fixed;
+      top: -50px;
+      font-size: 2rem;
+      animation: fall 5s linear forwards;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 8px;
+      height: 14px;
+      background: red;
+      opacity: 0.8;
+      animation: fallConfetti 4s linear forwards;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    @keyframes fallConfetti {
+      to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div class="page active" id="page1">
+    <h1>🎉🎂 Happy Birthday, Himanshu  🎂🎉</h1>
+    <p>🎂🎂🎂 Many Many Happy Returns of the Day! 🎂🎂🎂</p>
+    <p>Wishing you lots of joy, happiness, and magical moments today! 🥳✨🎊</p>
+
+    <div class="media">
+      <img src="WhatsApp Image 2025-10-15 at 23.36.58 (1).jpeg" alt="Birthday Celebration">
+    </div>
+
+    <div class="repeated-wishes">
+      <div>🎂 Happy Birthday  🎂</div>
+      <div>🎉 Many Many Happy Returns of the Day! 🎉</div>
+      <div>🥳 Stay Blessed  🥳</div>
+      <div>🎂 Lots of Love 🎂</div>
+      <div>🌟 Maje karo 🌟</div>
+     
+      <div>🎊 Party Time 🎊</div>
+      
+    </div>
+
+    <button class="btn" onclick="popperBurst()">🎊 Celebrate 🎊</button>
+    <button class="btn" onclick="nextPage(2)">Next ➡️</button>
+   
+    <audio autoplay loop>
+      <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/wav">
+    </audio>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5u4xTa3LR2U?si=jJs1F6DEbfF-JSUL&amp;clip=UgkxHIT1xcIMc66wNf2krp_pbn_PyUC6-iyW&amp;clipt=EL6vARjQzAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page" id="page2">
+    <h1>💖 Special Memories 💖</h1>
+    <p>Here are some images and a video to celebrate Himanshu's special day!</p>
+
+    <div id="balloon-container"></div>
+
+    <div class="media">
+      
+      <img src="WhatsApp Image 2025-10-15 at 22.58.19.jpeg" alt="Special Memory" >
+      <video controls autoplay >
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <button class="btn" onclick="prevPage(1)">⬅️ Back</button>
+    <button class="btn" onclick="nextPage(3)">Next ➡️</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page" id="page3"> 
+    <h1>🎊 Heartfelt Wishes 🎊</h1>
+    <p>Some beautiful wishes written just for you, Himanshu:</p>
+  
+    <div class="media">
+      <img src="WhatsApp Image 2025-10-15 at 23.05.15 (1).jpeg" alt="Celebration">
+    </div>
+
+    <div class="blessing">🎉 Wishing you a birthday filled with love, laughter, and endless joy.</div>
+    <div class="blessing">🎂 May your day be as special as you are, surrounded by your loved ones.</div>  
+    <div class="blessing">🥳 Here’s to new adventures, dreams, and happiness in the year ahead!</div>
+
+    <button class="btn" onclick="popperBurst()">🎊 Celebrate 🎊</button>
+    <button class="btn" onclick="prevPage(2)">⬅️ Back</button>
+    <button class="btn" onclick="nextPage(4)">Next ➡️</button>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="page" id="page4">
+    <h1>🌟 With Love and Blessings 🌟</h1>
+    <p>Here are some heartfelt wishes written just for you, Himanshu:</p>
+
+    
+
+    <div class="blessing">✨ May your birthday be filled with laughter, love, and unforgettable moments.</div>
+    <div class="blessing">💖 Wishing you endless happiness, success, and health throughout your journey.</div>
+    <div class="blessing">🌹 May every step you take bring you closer to your dreams and aspirations.</div>
+    <div class="blessing">🎁 May your life be a collection of cherished memories and endless blessings.</div>
+
+    
+
+    <button class="btn" onclick="prevPage(3)">⬅️ Back</button>
+    <button class="btn" onclick="nextPage(1)">🔄 Back to Start</button>
+  </div>
+
+  <script>
+    // Popper burst in center
+    function popperBurst() {
+      for (let i = 0; i < 40; i++) {
+        const span = document.createElement('span');
+        span.textContent = ["🎉","🎊","✨","🥳","💥","🎂"][Math.floor(Math.random()*6)];
+        span.style.position = 'absolute';
+        span.style.left = window.innerWidth/2 + 'px';
+        span.style.top = window.innerHeight/2 + 'px';
+        span.style.fontSize = '2rem';
+        span.style.transition = 'transform 1.5s ease, opacity 1.5s';
+        document.body.appendChild(span);
+        setTimeout(()=>{
+          span.style.transform = `translate(${Math.random()*600-300}px, ${Math.random()*600-300}px) rotate(${Math.random()*720}deg)`;
+          span.style.opacity = '0';
+        }, 50);
+        setTimeout(()=>span.remove(), 2000);
+      }
+      for (let i = 0; i < 60; i++) {
+        const conf = document.createElement("div");
+        conf.className = "confetti";
+        conf.style.left = window.innerWidth/2 + "px";
+        conf.style.top = window.innerHeight/2 + "px";
+        conf.style.background = ["#ff0","#0f0","#00f","#f0f","#0ff","#f00"][Math.floor(Math.random()*6)];
+        conf.style.width = (6 + Math.random()*6) + "px";
+        conf.style.height = (10 + Math.random()*10) + "px";
+        conf.style.transition = "transform 1.5s ease, opacity 1.5s";
+        document.body.appendChild(conf);
+        setTimeout(()=>{
+          conf.style.transform = `translate(${Math.random()*600-300}px, ${Math.random()*600-300}px) rotate(${Math.random()*720}deg)`;
+          conf.style.opacity = "0";
+        },50);
+        setTimeout(()=>conf.remove(), 2000);
+      }
+    }
+
+    // Continuous falling poppers + confetti
+    function fallingEffects() {
+      setInterval(()=>{
+        const el = document.createElement("div");
+        el.className = "popper";
+        el.textContent = ["🎉","🎊","✨","🥳","💥","🎂"][Math.floor(Math.random()*6)];
+        el.style.left = Math.random() * 100 + "vw";
+        el.style.fontSize = (20 + Math.random()*20) + "px";
+        el.style.animationDuration = (3 + Math.random()*3) + "s";
+        document.body.appendChild(el);
+        setTimeout(()=>el.remove(), 6000);
+
+        for (let i = 0; i < 3; i++) {
+          const conf = document.createElement("div");
+          conf.className = "confetti";
+          conf.style.left = Math.random() * 100 + "vw";
+          conf.style.background = ["#ff0","#0f0","#00f","#f0f","#0ff","#f00"][Math.floor(Math.random()*6)];
+          conf.style.width = (6 + Math.random()*6) + "px";
+          conf.style.height = (10 + Math.random()*10) + "px";
+          conf.style.animationDuration = (3 + Math.random()*3) + "s";
+          document.body.appendChild(conf);
+          setTimeout(()=>conf.remove(), 6000);
+        }
+      }, 300);
+    }
+    fallingEffects();
+
+    // Page navigation with auto burst
+    function nextPage(num){
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.getElementById('page'+num).classList.add('active');
+      popperBurst();
+    }
+    function prevPage(num){
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.getElementById('page'+num).classList.add('active');
+      popperBurst();
+    }
+
+    // Balloons on Page 2
+    function createBalloons() {
+      const colors = ["red","blue","green","yellow","purple","pink","orange"];
+      const container = document.getElementById("balloon-container");
+      setInterval(()=>{
+        const balloon = document.createElement("div");
+        balloon.classList.add("balloon");
+        balloon.style.background = colors[Math.floor(Math.random()*colors.length)];
+        balloon.style.left = Math.random() * 90 + "vw";
+        balloon.style.width = 40 + Math.random()*40 + "px";
+        balloon.style.height = 60 + Math.random()*40 + "px";
+        balloon.style.animationDuration = (5 + Math.random()*5) + "s";
+        container.appendChild(balloon);
+        setTimeout(()=>balloon.remove(), 10000);
+      }, 800);
+    }
+    createBalloons();
+
+    // First load burst
+    window.onload = () => popperBurst();
+  </script>
+</body>
+</html>
